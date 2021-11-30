@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				sh 'composer install'
+				sh 'phpunit --log-junit results/phpunit/phpunit.xml -c tests/phpunit.xml'
 			}
 		}
 		stage('Test') {
