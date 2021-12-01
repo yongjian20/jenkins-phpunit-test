@@ -2,7 +2,9 @@ pipeline {
 	agent any
 	stages {
 		stage('Build') {
-			sh 'composer install'
+			steps {
+				sh 'composer install'
+			}
 		}
 		stage('Test') {
 			steps {
